@@ -16,7 +16,7 @@ if(NOT DEFINED OBS_VERSION_OVERRIDE)
      AND NOT DEFINED BETA
      AND EXISTS "${CMAKE_SOURCE_DIR}/.git")
     execute_process(
-      COMMAND git describe --always --tags --dirty=-modified
+      COMMAND git describe --always --tags --dirty=-dorkus
       OUTPUT_VARIABLE _OBS_VERSION
       WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
       RESULT_VARIABLE _OBS_VERSION_RESULT

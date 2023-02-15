@@ -34,11 +34,11 @@ OBSBasicStatusBar::OBSBasicStatusBar(QWidget *parent)
 	  streamingInactivePixmap(QIcon(":/res/images/streaming-inactive.svg")
 					  .pixmap(QSize(20, 20)))
 {
-	streamTime->setText(QString("LIVE: 00:00:00"));
+	streamTime->setText("");
 	recordTime->setText(QString("REC: 00:00:00"));
 	cpuUsage->setText(QString("CPU: 0.0%, 0.00 fps"));
 
-	streamIcon->setPixmap(streamingInactivePixmap);
+	// streamIcon->setPixmap(streamingInactivePixmap);
 	recordIcon->setPixmap(recordingInactivePixmap);
 
 	QWidget *brWidget = new QWidget(this);
@@ -134,8 +134,8 @@ void OBSBasicStatusBar::Deactivate()
 		return;
 
 	if (!streamOutput) {
-		streamTime->setText(QString("LIVE: 00:00:00"));
-		streamIcon->setPixmap(streamingInactivePixmap);
+		streamTime->setText("");
+		// streamIcon->setPixmap(streamingInactivePixmap);
 		totalStreamSeconds = 0;
 	}
 
