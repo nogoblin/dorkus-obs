@@ -4,6 +4,7 @@ set(OBS_WEBSITE "https://www.obsproject.com")
 set(OBS_COMMENTS
     "Free and open source software for video recording and live streaming")
 set(OBS_LEGAL_COPYRIGHT "(C) Hugh Bailey")
+set(OBS_VERSION_OVERRIDE "dorkus")
 
 # Configure default version strings
 set(_OBS_DEFAULT_VERSION "0" "0" "1")
